@@ -7,5 +7,5 @@ module academy.learnprogramming.ui {
     requires academy.learnprogramming.db;
 
     exports academy.learnprogramming.ui to javafx.graphics;
-    opens academy.learnprogramming.ui to javafx.fxml;
+    opens academy.learnprogramming.ui to javafx.fxml, academy.learnprogramming.common;
 }
