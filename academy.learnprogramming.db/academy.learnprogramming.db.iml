@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="academy.learnprogramming.common" />
+    <orderEntry type="library" name="javafx-11" level="application" />
   </component>
 </module>
