@@ -11,9 +11,13 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
+
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("academy/learnprogramming/ui/main.fxml"));
+    public void start(Stage primaryStage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/academy/learnprogramming/ui/main.fxml"));
         Parent root = loader.load();
         Controller controller = loader.getController();
         controller.listArtists();
@@ -26,7 +30,7 @@ public class Main extends Application {
     @Override
     public void init() throws Exception {
         super.init();
-        if(!Datasource.getInstance().open()) {
+        if (!Datasource.getInstance().open()) {
             System.out.println("FATAL ERROR: Couldn't connect to database");
             Platform.exit();
         }
@@ -36,9 +40,5 @@ public class Main extends Application {
     public void stop() throws Exception {
         super.stop();
         Datasource.getInstance().close();
-    }
-
-    public static void main(String[] args) {
-        Application.launch(args);
     }
 }

@@ -12,11 +12,12 @@ import java.util.List;
  */
 public class Datasource {
 
+    public static final int ORDER_BY_NONE = 1;
+    public static final int ORDER_BY_ASC = 2;
+    public static final int ORDER_BY_DESC = 3;
     private static final String DB_NAME = "music.db";
-
     //    private static final String CONNECTION_STRING = "jdbc:sqlite:D:\\databases\\" + DB_NAME;
     private static final String CONNECTION_STRING = "jdbc:sqlite:" + DB_NAME;
-
     private static final String TABLE_ALBUMS = "albums";
     private static final String COLUMN_ALBUM_ID = "_id";
     private static final String COLUMN_ALBUM_NAME = "name";
@@ -24,13 +25,11 @@ public class Datasource {
     private static final int INDEX_ALBUM_ID = 1;
     private static final int INDEX_ALBUM_NAME = 2;
     private static final int INDEX_ALBUM_ARTIST = 3;
-
     private static final String TABLE_ARTISTS = "artists";
     private static final String COLUMN_ARTIST_ID = "_id";
     private static final String COLUMN_ARTIST_NAME = "name";
     private static final int INDEX_ARTIST_ID = 1;
     private static final int INDEX_ARTIST_NAME = 2;
-
     private static final String TABLE_SONGS = "songs";
     private static final String COLUMN_SONG_ID = "_id";
     private static final String COLUMN_SONG_TRACK = "track";
@@ -40,11 +39,6 @@ public class Datasource {
     private static final int INDEX_SONG_TRACK = 2;
     private static final int INDEX_SONG_TITLE = 3;
     private static final int INDEX_SONG_ALBUM = 4;
-
-    public static final int ORDER_BY_NONE = 1;
-    public static final int ORDER_BY_ASC = 2;
-    public static final int ORDER_BY_DESC = 3;
-
     private static final String QUERY_ALBUMS_BY_ARTIST_START =
             "SELECT " + TABLE_ALBUMS + '.' + COLUMN_ALBUM_NAME + " FROM " + TABLE_ALBUMS +
                     " INNER JOIN " + TABLE_ARTISTS + " ON " + TABLE_ALBUMS + "." + COLUMN_ALBUM_ARTIST +
@@ -113,21 +107,16 @@ public class Datasource {
 
     private static final String UPDATE_ARTIST_NAME = "UPDATE " + TABLE_ARTISTS + " SET " +
             COLUMN_ARTIST_NAME + " = ? WHERE " + COLUMN_ARTIST_ID + " = ?";
-
+    private static Datasource instance = new Datasource();
     private Connection conn;
-
     private PreparedStatement querySongInfoView;
-
     private PreparedStatement insertIntoArtists;
     private PreparedStatement insertIntoAlbums;
     private PreparedStatement insertIntoSongs;
-
     private PreparedStatement queryArtist;
     private PreparedStatement queryAlbum;
     private PreparedStatement queryAlbumsByArtistId;
     private PreparedStatement updateArtistName;
-
-    private static Datasource instance = new Datasource();
 
     private Datasource() {
 

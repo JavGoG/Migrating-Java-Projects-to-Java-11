@@ -35,7 +35,7 @@ public class Controller {
     @FXML
     public void listAlbumsForArtist() {
         final Artist artist = (Artist) artistTable.getSelectionModel().getSelectedItem();
-        if(artist == null) {
+        if (artist == null) {
             System.out.println("NO ARTIST SELECTED");
             return;
         }
@@ -56,7 +56,7 @@ public class Controller {
 class GetAllArtistsTask extends Task {
 
     @Override
-    public ObservableList<Artist> call()  {
+    public ObservableList<Artist> call() {
         return FXCollections.observableArrayList
                 (Datasource.getInstance().queryArtists(Datasource.ORDER_BY_ASC));
     }
