@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Migrating-Java-Projects-to-Java-9-Creating-the-first-module-(Common)-Source-code.iml" filepath="$PROJECT_DIR$/Migrating-Java-Projects-to-Java-9-Creating-the-first-module-(Common)-Source-code.iml" />
       <module fileurl="file://$PROJECT_DIR$/academy.learnprogramming.commn/academy.learnprogramming.common.iml" filepath="$PROJECT_DIR$/academy.learnprogramming.commn/academy.learnprogramming.common.iml" />
       <module fileurl="file://$PROJECT_DIR$/academy.learnprogramming.db/academy.learnprogramming.db.iml" filepath="$PROJECT_DIR$/academy.learnprogramming.db/academy.learnprogramming.db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/academy.learnprogramming.ui/academy.learnprogramming.ui.iml" filepath="$PROJECT_DIR$/academy.learnprogramming.ui/academy.learnprogramming.ui.iml" />
     </modules>
   </component>
 </project>
