@@ -1,0 +1,11 @@
+module academy.learnprogramming.common {
+    requires javafx.base;
+    requires java.sql;
+    requires javafx.graphics;
+    requires javafx.fxml;
+    requires javafx.controls;
+
+    exports academy.learnprogramming.common;
+    opens academy.learnprogramming.common to javafx.fxml, javafx.base;
+
+}

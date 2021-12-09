@@ -1,7 +1,11 @@
 <component name="libraryTable">
   <library name="sqlite-jdbc-3.21.0">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://$PROJECT_DIR$/libs/sqlite-jdbc-3.21.0.jar!/" />
+=======
+      <root url="jar://$PROJECT_DIR$/Migrating-Java-Projects-to-Java-11-master/libs/sqlite-jdbc-3.21.0.jar!/" />
+>>>>>>> beacbe0 (Adding dependencies (Artist))
     </CLASSES>
     <JAVADOC />
     <SOURCES />
